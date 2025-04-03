@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+* {
+    font-family: 'Lato', sans-serif;
+}
+h2{
+    background-color:rgb(37, 150, 190);
+    border-radius: 10px;
+    color: white;
+    padding: 0.4% 0.75%;
+    font-weight: normal;
+    font-size: xx-large;
+} 
+.case{
+    border-radius: 10px;
+    border: 2px solid rgb(37, 150, 190);
+    margin: 0 1%;
+    padding:0.2% 0.75%;
+}
+h3{
+    font-weight: normal;
+    text-align: center;
+    padding:0;
+    margin:0;
+}
+a {
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: rgb(37, 150, 190);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 0.2% 0.75%;
+    font-size: larger;
+}
+.valeur{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+#graphe {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start;  
+    width: 100%;
+    margin: auto;
+    padding-top: 20px;
+}
+#graph{
+    width: 100%;
+    height: 100%; 
+    max-width: 600px; 
+    max-height: 400px; 
+}
+

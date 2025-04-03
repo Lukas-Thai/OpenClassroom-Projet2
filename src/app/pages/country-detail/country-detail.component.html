@@ -1,0 +1,25 @@
+<div class="flex-container">
+    <h2>{{countryName}}</h2>
+</div>
+<div class="flex-container">
+      <div class="case">
+        <h3>Number of entries</h3>
+        <h3 class="valeur" id="NBEntry">{{nbEntry}}</h3>
+      </div>
+      <div class="case">
+        <h3>Total number medals</h3>
+        <h3 class="valeur" id="NBMedals">{{nbMedal}}</h3>
+      </div>
+      <div class="case">
+        <h3>Total number of athletes</h3>
+        <h3 class="valeur" id="NBAthletes">{{nbAthlete}}</h3>
+      </div>
+</div>
+<div id="graphe">
+  <canvas id="graph">
+  </canvas>
+</div>
+<div class="flex-container">
+    <a [routerLink]="['']">Retour au menu principal</a>
+</div>
+

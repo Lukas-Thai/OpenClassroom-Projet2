@@ -1,3 +1,17 @@
-<h2>Olympic games app</h2>
-<hr />
-<p>{{ (olympics$ | async)?.length }} data loaded</p>
+<div class="flex-container">
+<h2>Medals Per Country</h2>
+</div>
+<div class="flex-container">
+  <div class="case">
+    <h3>Number of JOs</h3>
+    <h3 class="valeur" id="NBJO">{{nbJo}}</h3>
+  </div>
+  <div class="case">
+    <h3>Number of countries</h3>
+    <h3 class="valeur" id="NBCountry">{{nbCountry}}</h3>
+  </div>
+</div>
+<div id="graphe">
+  <canvas id="graph">
+  </canvas>
+</div>
