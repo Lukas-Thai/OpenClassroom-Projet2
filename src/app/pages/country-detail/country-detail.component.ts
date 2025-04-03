@@ -41,7 +41,7 @@ export class CountryDetailComponent implements OnInit{
         this.countryId = parseInt(paramId as string);
       }
       catch(e){
-        this.countryName = "Error";
+        this.countryName = "Error : No Id Provided";
       }
     });
 
@@ -73,6 +73,16 @@ export class CountryDetailComponent implements OnInit{
         responsive: true,
         maintainAspectRatio: false ,
         scales: {
+          x: {
+            title: {
+              display: true,
+              text: "Années", 
+              font: {
+                size: 25,
+              },
+              color: "gray" 
+            }
+          },
           y: { 
             beginAtZero: true
           }
@@ -108,6 +118,9 @@ export class CountryDetailComponent implements OnInit{
         this.nbAthlete = this.rawData[0].participations.reduce((sum, p) => sum + p.athleteCount, 0);
       }
     });
+    if(this.rawData.length === 0){
+      this.countryName = "No Data";
+    }
   }
   ngOnDestroy() {
     this.destroy$.next();
