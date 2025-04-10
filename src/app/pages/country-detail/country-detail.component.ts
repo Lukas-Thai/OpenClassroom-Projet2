@@ -76,7 +76,7 @@ export class CountryDetailComponent implements OnInit{
           x: {
             title: {
               display: true,
-              text: "Années", 
+              text: "Dates", 
               font: {
                 size: 25,
               },
