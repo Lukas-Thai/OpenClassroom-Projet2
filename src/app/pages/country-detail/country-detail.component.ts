@@ -8,18 +8,19 @@ import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { HomeComponent } from '../home/home.component';
 import Chart, { ChartConfiguration, ChartItem } from 'chart.js/auto';
+import { CaseComponent } from 'src/app/components/case/case.component';
 
 @Component({
   selector: 'app-country-detail',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, CaseComponent],
   templateUrl: './country-detail.component.html',
   styleUrl: './country-detail.component.scss'
 })
 
 export class CountryDetailComponent implements OnInit{
   private countryId!: number;
-  public olympics$ !: Observable<Olympic>;
+  public olympics$ !: Observable<Olympic | null | undefined>;
   private destroy$ = new Subject<void>();
   private rawData : Array<Olympic> = []; 
   public countryName:string = "Fetching...";
@@ -52,8 +53,8 @@ export class CountryDetailComponent implements OnInit{
         takeUntil(this.destroy$)
       )
       .subscribe({
-        next: (data) => {
-          this.addToRawData(data);
+        next: (data: Olympic | null | undefined) => {
+          this.addToRawData(data as Olympic);
           this.updateGraph();
         },
         error: (err) => {

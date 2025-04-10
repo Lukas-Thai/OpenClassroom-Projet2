@@ -10,8 +10,8 @@ example of an olympic country:
     participations: []
 }
 */
-export class Olympic{
-    id !:number;
-    country !:string;
-    participations !: Array<Participation>;
+export interface Olympic{
+    id :number;
+    country :string;
+    participations : Array<Participation>;
 }
